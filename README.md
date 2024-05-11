@@ -20,6 +20,8 @@ on:
       - '.github/workflows/dependabot-validate.yml'
 jobs:
   validate:
+    permissions:
+      pull-requests: write # required for the sticky pull request comment
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
